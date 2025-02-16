@@ -5,7 +5,7 @@ import { FaCircleArrowDown } from "react-icons/fa6";
 const DownloadCV = async () => {
   return (
     <Link
-      href="/pdf/Danial-Khakbaz-Resume-2025.pdf"
+      href="/pdf/Danial Khakbaz Resume 2025.pdf"
       target="_blank"
       locale={false}
     >
