@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import UIDLogo from "@/public/logos/companies/uid-logo.webp";
-import ISCLogo from "@/public/logos/companies/isc-logo.webp";
+import BankIDLogo from "@/public/logos/companies/bankid-logo.webp";
 import HadishLogo from "@/public/logos/companies/hadish-logo.webp";
 import CrossLogo from "@/public/logos/companies/cross-logo.webp";
 
@@ -22,6 +22,30 @@ type WorkExperiencesType = {
 };
 
 export const workExperiences: WorkExperiencesType[] = [
+  {
+    logo: { src: BankIDLogo, alt: "BankID's logo" },
+    position: "Front-end Developer",
+    company_name: "Bank-ID",
+    info: "Worked in the Bank-ID team as the first e-KYC service provider in Iran which uses powerful AI algorithms including live face detection and verification to authenticate the users’ ID, with more than 50,000 daily users and 6,000,000 successful authentications",
+    descriptions: [
+      {
+        paragraph:
+          "Tackled highly complex concepts and projects, including creating reusable components for our customers to integrate into their code",
+      },
+      {
+        paragraph:
+          "Designed, developed, and maintained 3 panels with different roles",
+      },
+      {
+        paragraph:
+          "Thrived in a fast-paced and demanding environment, tackling complex concepts and projects that required a high degree of precision and ability to adapt to changing circumstances",
+      },
+    ],
+    timeline: "Sep 2022 - Present",
+    workplace_type: "Hybrid",
+    location: "Tehran, Iran",
+    divider: true,
+  },
   {
     logo: { src: UIDLogo, alt: "UID's logo" },
     position: "Front-end Developer",
@@ -45,32 +69,8 @@ export const workExperiences: WorkExperiencesType[] = [
           "Contributed to streamlining processes and improving development team efficiency",
       },
     ],
-    timeline: "May 2024 - Present",
+    timeline: "May 2024 - Aug 2024",
     workplace_type: "Remote",
-    location: "Tehran, Iran",
-    divider: true,
-  },
-  {
-    logo: { src: ISCLogo, alt: "Informatics Services Corporation(ISC)'s logo" },
-    position: "Front-end Developer",
-    company_name: "Informatics Services Corporation",
-    info: "Worked in the Bank-ID team as the first e-KYC service provider in Iran which uses powerful AI algorithms including live face detection and verification to authenticate the users’ ID, with more than 50,000 daily users and 6,000,000 successful authentications",
-    descriptions: [
-      {
-        paragraph:
-          "Tackled highly complex concepts and projects, including creating reusable components for our customers to integrate into their code",
-      },
-      {
-        paragraph:
-          "Designed, developed, and maintained 3 panels with different roles",
-      },
-      {
-        paragraph:
-          "Thrived in a fast-paced and demanding environment, tackling complex concepts and projects that required a high degree of precision and ability to adapt to changing circumstances",
-      },
-    ],
-    timeline: "Sep 2022 - Present",
-    workplace_type: "Hybrid",
     location: "Tehran, Iran",
     divider: true,
   },
