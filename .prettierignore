@@ -12,6 +12,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# ReadME
+README.md
+
 # typescript
 *.tsbuildinfo
 react-app-env.d.ts
