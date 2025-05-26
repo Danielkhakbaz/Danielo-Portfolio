@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Danial Khakbaz's Portfolio
 
-## Getting Started
+<a href="https://danieloo.vercel.app/" target="_blank"><img src="public/images/projects/portfolio/screen-shot.png" alt="The screen-shot of the daniel's portfolio" /></a>
 
-First, run the development server:
+Danial Khakbaz's portfolio built with [Next.js](https://nextjs.org/), showcasing his skills as a Front-end developer with a journey toward becoming a Full-stack developer. This project highlights his ambition for continuous learning and crafting seamless web applications using modern technologies.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Overview
+
+This portfolio website serves as a professional platform to showcase Danial's work, skills, and personal philosophy on balanced living. It is optimized for performance and utilizes several popular tools and libraries for a smooth, interactive user experience.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Development Scripts](#development-scripts)
+- [Folder Structure](#folder-structure)
+
+## Features
+
+- **Responsive Design**: Fully responsive layout with smooth animations.
+- **Interactive Animations**: Powered by Framer Motion.
+- **MDX Support**: Easily integrates Markdown with React components.
+- **Theme Customization**: Leveraging Chakra UI for theme flexibility.
+- **View Transitions**: Provides smooth transitions between pages.
+- **Form Integration**: Contact form connected to EmailJS for direct communication.
+
+## Technologies Used
+
+- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static website generation.
+- **[React](https://reactjs.org/)** - JavaScript library for building user interfaces.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for rapid UI development.
+- **[shadcn/ui](https://ui.shadcn.com/)** - Re-usable components built with Radix UI and Tailwind CSS.
+- **[Framer Motion](https://www.framer.com/motion/)** - Animation library for React.
+- **[EmailJS](https://www.emailjs.com/)** - Service to send emails directly from the client-side.
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing.
+
+## Folder Structure
+
+```plaintext
+danielo-portfolio/
+├── app/                        # Source files for app pages(contains routing system)
+│   ├── blog/                   # Blog section (page for blog posts)
+│   ├── contact/                # Contact section (page for contact forms)
+│   ├── experiences/            # Experiences section (page for work experience)
+│   ├── projects/               # Projects section (page for showcasing projects)
+│   ├── error.tsx               # Custom error page
+│   ├── favicon.ico             # Favicon for the website
+│   ├── layout.tsx              # Root layout component for setting up global layouts
+│   ├── not-found.tsx           # Custom 404 page for handling not-found routes
+│   └── page.tsx                # Main landing page component
+│
+├── features/                   # Seperated pages with all their parts
+│   ├── home/                   # Home section (components for home posts)
+│   │   ├── components/         # Components related to home
+│   │   └── constants/          # Constants related to home
+│   │
+│   ├── blog/                   # Blog section (components for blog posts)
+│   │   ├── components/         # Components related to blog
+│   │   └── constants/          # Constants related to blog
+│   │
+│   ├── contact/                # Contact section (components for contact forms)
+│   │   ├── components/         # Components related to contact
+│   │   └── constants/          # Constants related to contact
+│   │
+│   ├── experiences/            # Experiences section (components for work experience)
+│   │   ├── components/         # Components related to experiences
+│   │   └── constants/          # Constants related to experiences
+│   │
+│   └── projects/               # Projects section (components for showcasing projects)
+│       ├── components/         # Components related to projects
+│       └── constants/          # Constants related to projects
+│
+├── shared/                     # All the pieces of codes that used throughout the app
+│   ├── components/             # Components used throughout the app
+│   ├── constants/              # Constants and configurations used throughout the app
+│   ├── providers/              # Context providers for managing global state and data
+│   ├── utils/                  # Utility function and components used throughout the app
+│   └── styles/                 # Global and theme-specific styling files
+│       ├── fonts/                   # Font files or font-related configurations
+│       ├── theme/                   # Theme settings for design consistency (colors, typography, etc.)
+│       └── globals.css              # Global CSS applied to the entire application
+│
+├── .eslintrc.json              # ESLint configuration for linting and code standards
+├── .prettierrc                 # Prettier configuration for consistent code formatting
+├── next.config.js              # Next.js configuration settings
+├── package.json                # Project metadata, scripts, and dependencies
+└── README.md                   # Documentation file explaining the project setup and usage
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To set up this project locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the repository**:
 
-## Learn More
+   ```bash
+   git clone https://github.com/Danielkhakbaz/Danielo-Portfolio
+   cd danielo-portfolio
 
-To learn more about Next.js, take a look at the following resources:
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```tsx
+   yarn;
+   ```
 
-## Deploy on Vercel
+3. **Run the development server**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```tsx
+   yarn dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```
+
+4. **Open http://localhost:3000 in your browser to see the project**.
+
+## Development Scripts
+
+Here are some helpful scripts to assist in the development and maintenance of this project:
+
+`dev`: Runs the app in development mode. <br/><br/>
+`build`: Compiles the app for production. <br/><br/>
+`start`: Starts the production server. <br/><br/>
+`lint`: Lints and fixes files using ESLint. <br/><br/>
+`fix`: Formats files using Prettier. <br/><br/>
+`check-prettier`: Checks the code format without making changes. <br/>

@@ -1,0 +1,94 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "plugins": ["boundaries"],
+  "settings": {
+    "boundaries/include": ["**/*"],
+    "boundaries/elements": [
+      {
+        "mode": "full",
+        "type": "shared",
+        "pattern": [
+          "shared/components/**/*",
+          "shared/constants/**/*",
+          "shared/hooks/**/*",
+          "shared/providers/**/*",
+          "shared/styles/**/*",
+          "shared/utils/**/*"
+        ]
+      },
+      {
+        "mode": "full",
+        "type": "feature",
+        "capture": ["featureName"],
+        "pattern": ["features/*/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "app",
+        "capture": ["_", "fileName"],
+        "pattern": ["app/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "public",
+        "pattern": ["public/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "i18n",
+        "pattern": ["i18n/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "neverImport",
+        "pattern": ["*"]
+      }
+    ]
+  },
+  "rules": {
+    "boundaries/no-unknown": ["error"],
+    "boundaries/no-unknown-files": ["error"],
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "disallow",
+        "rules": [
+          {
+            "from": ["app"],
+            "allow": ["shared", "public", "i18n"]
+          },
+          {
+            "from": ["shared"],
+            "allow": ["shared", "public", "i18n"]
+          },
+          {
+            "from": ["feature"],
+            "allow": [
+              "shared",
+              "public",
+              "i18n",
+              [
+                "feature",
+                {
+                  "featureName": "${from.featureName}"
+                }
+              ]
+            ]
+          },
+          {
+            "from": ["app", "neverImport"],
+            "allow": ["shared", "feature", "public", "i18n"]
+          },
+          {
+            "from": ["app"],
+            "allow": ["shared", "public", "i18n"]
+          },
+          {
+            "from": ["i18n"],
+            "allow": ["i18n"]
+          }
+        ]
+      }
+    ]
+  }
+}
