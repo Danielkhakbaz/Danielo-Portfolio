@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { ComponentPropsWithoutRef } from "react";
 import { highlight } from "sugar-high";
-import type { MDXComponents } from "mdx/types";
 import {
   Heading,
   Text,
@@ -24,7 +25,7 @@ type ListItemProps = ComponentPropsWithoutRef<"li">;
 type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
-const components: MDXComponents = {
+const components: any = {
   h1: (props: HeadingProps) => (
     <Heading
       as="h1"
@@ -122,11 +123,9 @@ const components: MDXComponents = {
   ),
 };
 
-export function useMDXComponents(
-  otherComponents: MDXComponents
-): MDXComponents {
+export const useMDXComponents = (otherComponents: any): any => {
   return {
     ...otherComponents,
     ...components,
   };
-}
+};

@@ -10,6 +10,7 @@ import {
   SiTailwindcss,
   SiRedux,
   SiReactquery,
+  SiDocker,
 } from "react-icons/si";
 
 type SkillsType = ReactNode;
@@ -85,6 +86,14 @@ export const skills: SkillsType[] = [
       height: "40px",
       color: "#FF495B",
       filter: "drop-shadow(0 0 1em #FF495B)",
+    }}
+  />,
+  <SiDocker
+    style={{
+      width: "40px",
+      height: "40px",
+      color: "#1D63ED",
+      filter: "drop-shadow(0 0 1em #1D63ED)",
     }}
   />,
 ];
