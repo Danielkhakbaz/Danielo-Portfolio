@@ -1,6 +1,9 @@
+import { ReactElement } from "react";
 import { StaticImageData } from "next/image";
-import UIDLogo from "@/public/logos/companies/uid-logo.webp";
+import { Text } from "@chakra-ui/react";
+import BluBankLogo from "@/public/logos/companies/blu-logo.webp";
 import BankIDLogo from "@/public/logos/companies/bankid-logo.webp";
+import UIDLogo from "@/public/logos/companies/uid-logo.webp";
 import HadishLogo from "@/public/logos/companies/hadish-logo.webp";
 import CrossLogo from "@/public/logos/companies/cross-logo.webp";
 
@@ -14,8 +17,8 @@ type WorkExperiencesType = {
   location: string;
   timeline: string;
   workplace_type: string;
-  info: string;
-  descriptions: {
+  info: ReactElement;
+  descriptions?: {
     paragraph: string;
   }[];
   divider?: boolean;
@@ -23,10 +26,54 @@ type WorkExperiencesType = {
 
 export const workExperiences: WorkExperiencesType[] = [
   {
+    logo: { src: BluBankLogo, alt: "Blu Bank's logo" },
+    position: "Front-end Developer",
+    company_name: "Blu Bank",
+    info: (
+      <Text fontWeight="bold" textAlign="justify" rel="preload">
+        At Blu Bank, we&apos;re redefining banking with the motto ‘Bank, but
+        Lovely.’ I contribute to our fully digital, branchless platform that
+        simplifies financial services, enabling account setup in under{" "}
+        <Text as="span" textDecoration="underline">
+          7 minutes
+        </Text>{" "}
+        with zero fees. We serve over{" "}
+        <Text as="span" textDecoration="underline">
+          10 million
+        </Text>{" "}
+        users and have achieved a strong market share of over{" "}
+        <Text as="span" textDecoration="underline">
+          60%
+        </Text>
+        —all while offering innovative solutions like vertical debit card
+        designs, BluJunior for youth, BluBox savings, and quick collateral-free
+        loans.
+      </Text>
+    ),
+    timeline: "Jul 2025 - Present",
+    workplace_type: "Hybrid",
+    location: "Tehran, Iran",
+    divider: true,
+  },
+  {
     logo: { src: BankIDLogo, alt: "BankID's logo" },
     position: "Front-end Developer",
     company_name: "Bank-ID",
-    info: "Worked in the Bank-ID team as the first e-KYC service provider in Iran which uses powerful AI algorithms including live face detection and verification to authenticate the users’ ID, with more than 50,000 daily users and 6,000,000 successful authentications",
+    info: (
+      <Text fontWeight="bold" textAlign="justify" rel="preload">
+        Worked in the Bank-ID team as the first e-KYC service provider in Iran
+        which uses powerful AI algorithms including live face detection and
+        verification to authenticate the users’ ID, with more than{" "}
+        <Text as="span" textDecoration="underline">
+          50,000
+        </Text>{" "}
+        daily users and{" "}
+        <Text as="span" textDecoration="underline">
+          6,000,000
+        </Text>{" "}
+        successful authentications
+      </Text>
+    ),
     descriptions: [
       {
         paragraph:
@@ -41,7 +88,7 @@ export const workExperiences: WorkExperiencesType[] = [
           "Thrived in a fast-paced and demanding environment, tackling complex concepts and projects that required a high degree of precision and ability to adapt to changing circumstances",
       },
     ],
-    timeline: "Sep 2022 - Present",
+    timeline: "Sep 2022 - Aug 2025",
     workplace_type: "Hybrid",
     location: "Tehran, Iran",
     divider: true,
@@ -50,7 +97,13 @@ export const workExperiences: WorkExperiencesType[] = [
     logo: { src: UIDLogo, alt: "UID's logo" },
     position: "Front-end Developer",
     company_name: "U-ID",
-    info: "UID is a cutting-edge technology company specializing in AI-driven solutions, such as authenticating user liveness through video verification",
+    info: (
+      <Text fontWeight="bold" textAlign="justify" rel="preload">
+        UID is a cutting-edge technology company specializing in AI-driven
+        solutions, such as authenticating user liveness through video
+        verification
+      </Text>
+    ),
     descriptions: [
       {
         paragraph:
@@ -78,7 +131,11 @@ export const workExperiences: WorkExperiencesType[] = [
     logo: { src: HadishLogo, alt: "Hadish Sabz Parseh's logo" },
     position: "Front-end Developer",
     company_name: "Hadish Sabz Parseh",
-    info: "Hadish Sabz Parseh is one of the largest Smart-TV manufacturers in Iran",
+    info: (
+      <Text fontWeight="bold" textAlign="justify" rel="preload">
+        Hadish Sabz Parseh is one of the largest Smart-TV manufacturers in Iran
+      </Text>
+    ),
     descriptions: [
       {
         paragraph:
@@ -98,7 +155,12 @@ export const workExperiences: WorkExperiencesType[] = [
     logo: { src: CrossLogo, alt: "Cross sport's logo" },
     position: "Front-end Developer",
     company_name: "Cross Sport",
-    info: "CrossSport is one of the largest online stores and manufacturers of sport equipment in the country",
+    info: (
+      <Text fontWeight="bold" textAlign="justify" rel="preload">
+        CrossSport is one of the largest online stores and manufacturers of
+        sport equipment in the country
+      </Text>
+    ),
     descriptions: [
       {
         paragraph:

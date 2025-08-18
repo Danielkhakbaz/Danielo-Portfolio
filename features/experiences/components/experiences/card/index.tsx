@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import Image, { StaticImageData } from "next/image";
 import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
@@ -12,8 +13,8 @@ type ExperiencesProps = {
     location: string;
     timeline: string;
     workplace_type: string;
-    info: string;
-    descriptions: {
+    info: ReactElement;
+    descriptions?: {
       paragraph: string;
     }[];
     divider?: boolean;
@@ -84,10 +85,8 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
         </Flex>
       </Flex>
       <Flex flexDirection="column" gap={1}>
-        <Text fontWeight="bold" textAlign="justify" rel="preload">
-          {experience.info}
-        </Text>
-        {experience.descriptions.map((description) => (
+        {experience.info}
+        {experience.descriptions?.map((description) => (
           <Text
             key={description.paragraph}
             textAlign="justify"
