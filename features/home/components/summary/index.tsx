@@ -11,7 +11,7 @@ const Summary = async () => {
     >
       <Flex flex="82%" flexDirection="column" gap={2}>
         <Heading size="2xl">Danial Khakbaz</Heading>
-        <Text>- Front-end Developer (Next.js, TypeScript)</Text>
+        <Text>- Software Engineer (Next.js, Nest.js)</Text>
       </Flex>
       <Center display="flex" alignItems="flex-start">
         <Image

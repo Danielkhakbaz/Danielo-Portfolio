@@ -127,8 +127,8 @@ const Interests = async () => {
           backgroundColor="blue.300"
           label={
             <Text color="black">
-              Let&apos;s keep it simple. Once you start weight training,
-              there&apos;s no escaping its grip, and it has become my{" "}
+              Let&apos;s keep it simple. Once you start Crossfit, there&apos;s
+              no escaping its grip, and it has become my{" "}
               <Text as="span" fontWeight="bolder" display="inline">
                 favorite part of the day
               </Text>
@@ -137,7 +137,7 @@ const Interests = async () => {
           }
         >
           <Badge colorScheme="blue" width="fit-content" fontSize={14.5}>
-            🏋🏻 Weight Training
+            🏋🏻 Crossfit
           </Badge>
         </Tooltip>
       </Flex>

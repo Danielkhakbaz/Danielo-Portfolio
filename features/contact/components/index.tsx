@@ -47,7 +47,7 @@ const Contact = () => {
     };
 
     emailjs
-      .send("service_jxi8oyf", "template_8ydezxa", formData, {
+      .send("service_e4r5aa4", "template_8ydezxa", formData, {
         publicKey: "hewZs0hGK_bkmpuex",
       })
       .then(

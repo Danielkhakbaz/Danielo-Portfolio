@@ -31,25 +31,32 @@ export const workExperiences: WorkExperiencesType[] = [
     company_name: "Blu Bank",
     info: (
       <Text fontWeight="bold" textAlign="justify" rel="preload">
-        At Blu Bank, we&apos;re redefining banking with the motto ‘Bank, but
-        Lovely.’ I contribute to our fully digital, branchless platform that
-        simplifies financial services, enabling account setup in under{" "}
+        At Blu Bank, The leading digital banking platform in Iran with more than{" "}
         <Text as="span" textDecoration="underline">
-          7 minutes
-        </Text>{" "}
-        with zero fees. We serve over{" "}
-        <Text as="span" textDecoration="underline">
-          10 million
-        </Text>{" "}
-        users and have achieved a strong market share of over{" "}
-        <Text as="span" textDecoration="underline">
-          60%
+          26 millions of users
         </Text>
-        —all while offering innovative solutions like vertical debit card
-        designs, BluJunior for youth, BluBox savings, and quick collateral-free
-        loans.
+        , I&apos;ve spent over a year contributing to the evolution of the
+        technology behind its digital banking ecosystem.
       </Text>
     ),
+    descriptions: [
+      {
+        paragraph:
+          "My primary focus has been on a large-scale Front-end modernization initiative, working alongside the engineering team to rearchitect and rewrite a Complex Monorepo-based, Multi-zone application that brings together more than seven legacy dashboard panels.",
+      },
+      {
+        paragraph:
+          "These systems have formed a core part of Blu Bank's operational infrastructure since its earliest stages.",
+      },
+      {
+        paragraph:
+          "Our goal goes beyond rewriting legacy code. We're building a more scalable, maintainable, and modular architecture that reduces technical debt, improves developer experience and establishes a stronger foundation for future product development.",
+      },
+      {
+        paragraph:
+          "Being part of this transformation has given me hands-on experience navigating complex legacy systems, making architectural decisions, and contributing to the long-term evolution of a large-scale fintech platform.",
+      },
+    ],
     timeline: "Jul 2025 - Present",
     workplace_type: "Hybrid",
     location: "Tehran, Iran",

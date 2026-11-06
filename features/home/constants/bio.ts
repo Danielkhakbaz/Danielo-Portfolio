@@ -18,7 +18,11 @@ export const bioSections: BioSectionsType[] = [
       "Successfully completed the Bachelor's degree in Computer Engineering and Started the Master's program in the same field.",
   },
   {
-    year: "2023 till now",
+    year: 2025,
+    content: "Started working as a Front-end Engineer at blubank.",
+  },
+  {
+    year: "2025 till now",
     content: "So much happend :)",
   },
 ];

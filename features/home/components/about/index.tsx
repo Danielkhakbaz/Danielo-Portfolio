@@ -13,11 +13,10 @@ const About = async () => {
     <SectionMaker label="About">
       <Flex flexDirection="column" gap={4}>
         <Text textAlign="justify" textIndent="1em">
-          Danial is a Front-end developer (Full-stack developer by the end of
-          2024), highly ambitious individual with a passion for continuous
-          learning and a keen interest in embracing new challenges. His
-          expertise lies in crafting seamless web applications using different
-          technologies.
+          Danial is a Software Engineer, highly ambitious individual with a
+          passion for continuous learning and a keen interest in embracing new
+          challenges. His expertise lies in crafting seamless web applications
+          using different technologies.
           <br />
           In addition to his professional endeavors, Danial is committed to
           maintaining a balanced lifestyle.
